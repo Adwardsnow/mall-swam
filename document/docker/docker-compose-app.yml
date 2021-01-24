@@ -4,9 +4,9 @@ services:
     image: mall/mall-admin:1.0-SNAPSHOT
     container_name: mall-admin
     ports:
-      - 8080:8080
+      - 8081:8081
     volumes:
-      - /mydata/app/mall-admin/logs:/var/logs
+      - /home/wangqiu/development/docker/project/mall-admin/logs:/var/logs
       - /etc/localtime:/etc/localtime
     environment:
       - 'TZ="Asia/Shanghai"'
@@ -17,9 +17,9 @@ services:
     image: mall/mall-search:1.0-SNAPSHOT
     container_name: mall-search
     ports:
-      - 8081:8081
+      - 8086:8086
     volumes:
-      - /mydata/app/mall-search/logs:/var/logs
+      - /home/wangqiu/development/docker/project/mall-search/logs:/var/logs
       - /etc/localtime:/etc/localtime
     environment:
       - 'TZ="Asia/Shanghai"'
@@ -33,7 +33,7 @@ services:
     ports:
       - 8085:8085
     volumes:
-      - /mydata/app/mall-portal/logs:/var/logs
+      - /home/wangqiu/development/docker/project/mall-portal/logs:/var/logs
       - /etc/localtime:/etc/localtime
     environment:
       - 'TZ="Asia/Shanghai"'
@@ -49,7 +49,7 @@ services:
     ports:
       - 8401:8401
     volumes:
-      - /mydata/app/mall-auth/logs:/var/logs
+      - /home/wangqiu/development/docker/project/mall-auth/logs:/var/logs
       - /etc/localtime:/etc/localtime
     environment:
       - 'TZ="Asia/Shanghai"'
@@ -61,7 +61,7 @@ services:
     ports:
       - 8201:8201
     volumes:
-      - /mydata/app/mall-gateway/logs:/var/logs
+      - /home/wangqiu/development/docker/project/mall-gateway/logs:/var/logs
       - /etc/localtime:/etc/localtime
     environment:
       - 'TZ="Asia/Shanghai"'
@@ -74,7 +74,7 @@ services:
     ports:
       - 8101:8101
     volumes:
-      - /mydata/app/mall-monitor/logs:/var/logs
+      - /home/wangqiu/development/docker/project/mall-monitor/logs:/var/logs
       - /etc/localtime:/etc/localtime
     environment:
       - 'TZ="Asia/Shanghai"'
